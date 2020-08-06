@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 const userRouter = require('express').Router();
 const fs = require('fs').promises;
 const path = require('path');
@@ -25,7 +24,7 @@ userRouter.get('/:id', (req, res) => {
       res.send(userObj);
     })
     .catch(() => {
-      res.status(500).send({ Error: 'Ошибка сервера' });
+      res.status(500).send({ message: 'Ошибка сервера' });
     });
 });
 

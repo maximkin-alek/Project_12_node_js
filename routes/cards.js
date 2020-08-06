@@ -10,7 +10,7 @@ cardsRouter.get('/', (req, res) => {
       res.send(cards);
     })
     .catch(() => {
-      res.status(500).send({ Error: 'Ошибка сервера' });
+      res.status(500).send({ message: 'Ошибка сервера' });
     });
 });
 
